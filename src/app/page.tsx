@@ -4,7 +4,8 @@ import { useForm } from 'react-hook-form';
 import Dashboard from '/Users/talebmohamed/Tp_Nextjs/healthcare-dashboard/src/app/pages/Dashboard/Dashboard';
 import Analytics from '/Users/talebmohamed/Tp_Nextjs/healthcare-dashboard/src/app/pages/Analytics/Analytics.js';
 import Extensions from '/Users/talebmohamed/Tp_Nextjs/healthcare-dashboard/src/app/pages/Extensions/Extensions';
-import "../app/globals.css"; 
+import "../app/globals.css";
+
 
 interface FormData {
   searchQuery: string;
@@ -16,6 +17,7 @@ export default function Home() {
       <nav className="bg-gray-800 w-full p-4">
         <div className="container mx-auto flex justify-between">
           <div>
+          <div id="dateTime" className="text-white"></div>
             <Link href="/">
               <span className="text-white text-lg font-semibold">Healthcare Dashboard</span>
             </Link>
@@ -23,13 +25,13 @@ export default function Home() {
           <div className="flex items-center">
             {/* Liens de navigation */}
             <div>
-              <Link href="/dashboard">
+              <Link href="./Dashboard">
                 <span className="text-white mr-4">Dashboard</span>
               </Link>
-              <Link href="/analytics">
+              <Link href="./Analytics">
                 <span className="text-white mr-4">Analytics</span>
               </Link>
-              <Link href="/extensions">
+              <Link href="./Extensions">
                 <span className="text-white">Extensions</span>
               </Link>
             </div>

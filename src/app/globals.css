@@ -65,3 +65,11 @@
 .submit-button:hover {
   background-color: #357cd6;
 }
+
+body {
+  background-color: #80BDE3;
+}
+
+#dateTime {
+  font-size: 16px;
+}
