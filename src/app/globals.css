@@ -2,23 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-.button-container {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
+/* globals.css */
+
+.nav {
+  background-color: #333;
 }
 
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.nav a:hover {
+  background-color: #555;
+}
+
+
+/* Styles des boutons */
 .button {
   padding: 10px 20px;
   font-size: 16px;
   border: none;
   border-radius: 5px;
-  background-color: #007bff;
-  color: #fff;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.button:hover {
-  background-color: #0056b3;
+/* Bouton principal */
+.buttonPrimary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Bouton secondaire */
+.buttonSecondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+/* Bouton tertiaire */
+.buttonTertiary {
+  background-color: #28a745;
+  color: #fff;
+}
+
+/* Animation au survol */
+.buttonHover:hover {
+  transform: scale(1.05); /* Augmente légèrement la taille */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une ombre */
 }

@@ -1,23 +1,57 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from '@/app/globals.css';
+import Dashboard from '/Users/talebmohamed/Tp_Nextjs/healthcare-dashboard/src/app/pages/Dashboard/Dashboard';
+import Analytics from '/Users/talebmohamed/Tp_Nextjs/healthcare-dashboard/src/app/pages/Analytics/Analytics.js';
+import Extensions from '/Users/talebmohamed/Tp_Nextjs/healthcare-dashboard/src/app/pages/Extensions/Extensions';
+import "../app/globals.css"; 
+
 
 export default function Home() {
   return (
-    <div>
-      <header>healthcare-dashboard</header>
+    <div className="flex flex-col h-screen">
+    {/* Barre de navigation */}
+    <nav className="bg-gray-800 w-full p-4">
+      <div className="container mx-auto flex justify-between">
+        <div>
+          <Link href="/">
+            <span className="text-white text-lg font-semibold">Healthcare Dashboard</span>
+          </Link>
+        </div>
+        <div>
+          <Link href="/dashboard">
+            <span className="text-white mr-4">Dashboard</span>
+          </Link>
+          <Link href="/analytics">
+            <span className="text-white mr-4">Analytics</span>
+          </Link>
+          <Link href="/extensions">
+            <span className="text-white">Extensions</span>
+          </Link>
+        </div>
+      </div>
+    </nav>
+    {/* Contenu de la page */}
+    <div className="flex flex-col items-center justify-center flex-1">
+      <header className="mt-8">Welcome to the Healthcare Dashboard</header>
       {/* Boutons stylisés */}
-      <div className={styles.button-container}>
-        <Link href="/dashboard">
-          <button className={styles.button}>Dashboard</button>
-        </Link>
-        <Link href="/analytics">
-          <button className={styles.button}>Analytics</button>
-        </Link>
-        <Link href="/extensions">
-          <button className={styles.button}>Extensions</button>
-        </Link>
+      <div className="flex flex-col items-center mt-8">
+        <div className='buttonPrimary'>
+          <Link href="/dashboard">
+            <button className="button">Dashboard</button>
+          </Link>
+        </div>
+        <div className='buttonSecondary mt-4'>
+          <Link href="/analytics">
+            <button className="button">Analytics</button>
+          </Link>
+        </div>
+        <div className='buttonTertiary mt-4'>
+          <Link href="/extensions">
+            <button className="button">Extensions</button>
+          </Link>
+        </div>
       </div>
     </div>
-  );
-}
+  </div>
+);
+  }

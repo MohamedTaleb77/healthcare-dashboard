@@ -1,5 +1,6 @@
 import React from 'react';
-import Layout from '@/app/components/Layout';
+import Layout from './components/Layout';
+import Link from 'next/link';
 
 const Dashboard = () => {
   return (
@@ -7,6 +8,10 @@ const Dashboard = () => {
       <div>
         <h1>Dashboard</h1>
         <p>This is the Dashboard page content.</p>
+        {/* Bouton pour naviguer vers la page Analytics */}
+        <Link href="/analytics">
+          <a>Go to Analytics</a>
+        </Link>
       </div>
     </Layout>
   );
