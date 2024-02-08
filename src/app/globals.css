@@ -52,3 +52,16 @@
   transform: scale(1.05); /* Augmente légèrement la taille */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une ombre */
 }
+
+.submit-button {
+  padding: 0.5rem 1rem;
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #357cd6;
+}
